@@ -27,5 +27,6 @@ for strategy, allocation_df in strategy_allocations.items():
 # Convert to a DataFrame for easier presentation
 report_df = pd.DataFrame(reports).T #T : transpose
 print(report_df)
+df.to_csv(r"report_df.csv", index=False)
 streamlit_script = "visualization.py" 
 os.system(f"streamlit run {streamlit_script}")
