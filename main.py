@@ -1,6 +1,6 @@
 import pandas as pd
 import allocation_functions as af
-
+import os
 #import datasets
 hotels = pd.read_excel("hotels.xlsx")
 preferences = pd.read_excel("preferences.xlsx")
@@ -27,3 +27,5 @@ for strategy, allocation_df in strategy_allocations.items():
 # Convert to a DataFrame for easier presentation
 report_df = pd.DataFrame(reports).T #T : transpose
 print(report_df)
+streamlit_script = "visualization.py" 
+os.system(f"streamlit run {streamlit_script}")
